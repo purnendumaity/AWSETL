@@ -11,17 +11,25 @@ Fileprocessing.py
 AWSs3operation.py
 AWSdboperation.py
 .env file
+AWScloudshell_commands.txt ( sample command to use mysql db from AWScloudshell )
 Readme.txt
 source.zip
 
 =========This repository has 4 Python program file amd 1 env file =============
-I have not purposefully linked both the python program because sometimes internet speed
-or network issue can cause download problem so better to do individual testing.
+First pre-requisites are an AWS free tier account, creation of S3 bucket- input,output folder, creation of AWS RDS mysql instance, creating a database, creating appropriate inbound/outbound network rule so that from local machine remote S3 bucket and mysql DB connection is allowed.
+env file is used for various AWS and mysql credential related, for safety here it is blank
+we use python dotenv, os package to load this credentials during runtime.
 
----1st run the Filedownload.py----
+-----Filedownload.py----
 It utilizes Python requests package to download the source.zip file from internet URL Location
 and after unzipping action saves all unzipped files in subfolder /unzipped_folder
 source.zip file is being saved directly in project folder ./
+
+-----AWSs3operation.py----
+It utilizes Python boto3 package to connect to AWS S3 bucket and upload local files to respective remote directory
+
+-----AWSdboperation.py----
+It utilizes pandas, sqlalchemy, pymysql package to connect to AWS RDS Mysql instance and load the local final csv file output to the remote table.
 
 ---2nd run the Fileprocessing.py----
 This is the ETL Processing program
@@ -39,7 +47,7 @@ extract_csv, extract_json,extract_xml these functions extracts data from csv,jso
 extract_data function combines all extracted data
 transform_data function modified the height and weight
 load_data function loads the final data into respective output csv file
-Running the Overall ETL Process happens through line no 111-139
+
 
 =========== Post run ETL log file sample =====================
 2025-04-18 22:28:31 - All input files loading to AWS S3 bucket input directory completed
