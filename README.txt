@@ -8,10 +8,13 @@ AWSETL
 --subdirectory--/unzipped_folder
 Filedownload.py
 Fileprocessing.py
+AWSs3operation.py
+AWSdboperation.py
+.env file
 Readme.txt
 source.zip
 
-=========This repository has 2 separate Python program file=============
+=========This repository has 4 Python program file amd 1 env file =============
 I have not purposefully linked both the python program because sometimes internet speed
 or network issue can cause download problem so better to do individual testing.
 
