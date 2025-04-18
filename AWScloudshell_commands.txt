@@ -1,0 +1,5 @@
+mysql -h awsmysqldb.cvuueekqwmty.ap-south-1.rds.amazonaws.com -P 3306 -u admin -p
+
+show databases;
+show tables;
+select * from finaldata;

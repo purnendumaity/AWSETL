@@ -1,0 +1,29 @@
+2025-04-18 22:28:31 - All input files loading to AWS S3 bucket input directory completed
+2025-04-18 22:28:31 - ETL process started
+2025-04-18 22:28:31 - Total Number of Input File:  9
+2025-04-18 22:28:31 - Extracted record_count from CSV: ./unzipped_folder\source1.csv is: 5
+2025-04-18 22:28:31 - Extracted record_count from JSON: ./unzipped_folder\source1.json is: 4
+2025-04-18 22:28:31 - Extracted record_count from XML: ./unzipped_folder\source1.xml is: 4
+2025-04-18 22:28:31 - Extracted record_count from CSV: ./unzipped_folder\source2.csv is: 5
+2025-04-18 22:28:31 - Extracted record_count from JSON: ./unzipped_folder\source2.json is: 4
+2025-04-18 22:28:31 - Extracted record_count from XML: ./unzipped_folder\source2.xml is: 4
+2025-04-18 22:28:31 - Extracted record_count from CSV: ./unzipped_folder\source3.csv is: 5
+2025-04-18 22:28:31 - Extracted record_count from JSON: ./unzipped_folder\source3.json is: 4
+2025-04-18 22:28:31 - Extracted record_count from XML: ./unzipped_folder\source3.xml is: 4
+2025-04-18 22:28:31 - Total all records after extraction: 39
+2025-04-18 22:28:31 - Extraction section completed
+2025-04-18 22:28:31 - Transformed data: Converted height to meters and weight to kg
+2025-04-18 22:28:31 - Transformation section completed
+2025-04-18 22:28:31 - Loading section started
+2025-04-18 22:28:31 - Loaded all transformed data into CSV: ./output/transformed_data.csv
+2025-04-18 22:28:31 - Total number of all records from all source files: 39
+2025-04-18 22:28:31 - Data Pattern Check started
+2025-04-18 22:28:31 - Data Not Unique so loading unique records
+2025-04-18 22:28:31 - Total number of unique records from all source files: 13
+2025-04-18 22:28:31 - Loaded unique transformed data into CSV: ./output/unique_transformed_data.csv
+2025-04-18 22:28:31 - Data Pattern Check completed
+2025-04-18 22:28:31 - Loading section completed
+2025-04-18 22:28:31 - ETL process completed
+2025-04-18 22:28:33 - Output file loading to AWS S3 bucket output directory completed
+2025-04-18 22:28:35 - AWS mysql db operation completed
+2025-04-18 22:28:35 - Total program runtime (hh:mm:ss format) is: 00:00:07
