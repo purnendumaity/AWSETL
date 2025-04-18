@@ -16,7 +16,9 @@ Readme.txt
 source.zip
 
 =========This repository has 4 Python program file amd 1 env file =============
-First pre-requisites are an AWS free tier account, creation of S3 bucket- input,output folder, creation of AWS RDS mysql instance, creating a database, creating appropriate inbound/outbound network rule so that from local machine remote S3 bucket and mysql DB connection is allowed.
+First pre-requisites are an AWS free tier account, creation of S3 bucket- input,output folder, 
+creation of AWS RDS mysql instance, creating a database, creating appropriate inbound/outbound 
+network rule so that from local machine remote S3 bucket and mysql DB connection is allowed.
 env file is used for various AWS and mysql credential related, for safety here it is blank
 we use python dotenv, os package to load this credentials during runtime.
 
@@ -26,13 +28,15 @@ and after unzipping action saves all unzipped files in subfolder /unzipped_folde
 source.zip file is being saved directly in project folder ./
 
 -----AWSs3operation.py----
-It utilizes Python boto3 package to connect to AWS S3 bucket and upload local files to respective remote directory
+It utilizes Python boto3 package to connect to AWS S3 bucket and upload local files to respective 
+remote directory
 
 -----AWSdboperation.py----
-It utilizes pandas, sqlalchemy, pymysql package to connect to AWS RDS Mysql instance and load the local final csv file output to the remote table.
+It utilizes pandas, sqlalchemy, pymysql package to connect to AWS RDS Mysql instance and 
+load the local final csv file output to the remote table.
 
 ---2nd run the Fileprocessing.py----
-This is the ETL Processing program
+This is the overall ETL Processing program, it calls the Filedownload.py, AWSs3operation.py,AWSdboperation.py
 After all import section we need to set the required path of log and output filenames as below
 I have noticed that combine data file record is not unique;
 So I have created an additional outputfile with unique records only.
